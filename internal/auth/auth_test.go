@@ -22,7 +22,7 @@ func TestGetAPIKey_HeaderWithoutApiKeyPrefix(t *testing.T) {
 
 	_, err := GetAPIKey(headers)
 
-	if err == nil || err.Error() != "malformed authorization gheader" {
+	if err == nil || err.Error() != "malformed authorization header" {
 		t.Errorf("Expected 'malformed authorization header' error, got '%v'", err)
 	}
 }
